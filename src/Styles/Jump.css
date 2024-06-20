@@ -1,0 +1,13 @@
+
+.image-container {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container:hover img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  

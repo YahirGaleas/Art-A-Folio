@@ -1,0 +1,60 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Card from "../../components/Card.astro";
+import GaleriaNat from "../../components/Galeria.astro";
+import GaleriaYex from "../../components/GaleriaYex.astro";
+
+export async function getStaticPaths() {
+  const pages = [
+    {
+      artists: 'Yex',
+      title: "YexPlay",
+      text: "An artist for fun, but with the goal of making it his profession, Yex has been self-taught for 8 years, loving both art and animation. He is the founder of Art-A-Folio with a vision for the future.",
+    },
+    {
+      artists: 'Nat',
+      title: "LillyFall",
+      text: "I'm a regular guy who draws anything I have a hyperfixation on. My perception of reality is quite altered, and I fantasize about one day dedicating myself to drawing comics.",
+    },
+  ];
+  return pages.map(({ artists, title, text }) => {
+    return {
+      params: { artists },
+      props: { title, text },
+    };
+  });
+}
+
+const { title, text } = Astro.props;
+const { artists } = Astro.params;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{artists}</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-gradient-to-tr from-green-200 via-yellow-200 to-green-200">
+    <Header />
+    <!-- Espacio para separar el contenido del navbar -->
+    <div class="h-28 bg transparent"></div>
+
+    <div class="flex-grow">
+      <Card title={title} text={text} />
+      <!-- Renderizar la galería correspondiente -->
+      {artists === 'Nat' ? <GaleriaNat /> : <GaleriaYex />}
+    </div>
+
+    <!-- Divisor para mantener el footer en la parte inferior -->
+    <Footer class="mt-auto w-full" />
+  </body>
+</html>

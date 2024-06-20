@@ -1,0 +1,15 @@
+.float-up {
+    position: relative;
+    animation: floatUp 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes floatUp {
+    from {
+      transform: translateY(0);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    to {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  }

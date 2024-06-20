@@ -1,0 +1,25 @@
+---
+import "../Styles/Jump.css";
+import Image1 from "../../public/Images/IMG_0686.jpg"; 
+import Image2 from "../../public/Images/IMG_0693.jpg";
+import Image3 from "../../public/Images/IMG_0695.jpg";
+---
+
+<div class="flex flex-col items-center mt-16 space-y-8">
+    <!-- Imagen 1 - Centro -->
+    <div class="relative w-72 h-60 rounded-xl overflow-hidden cursor-pointer transform transition duration-300 image-container">
+        <img src={Image2.src} alt="Image 2" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+    </div>
+
+    <div class="flex justify-center space-x-8">
+        <!-- Imagen 2 - Esquina izquierda -->
+        <div class="relative w-60 h-80 rounded-xl overflow-hidden cursor-pointer transform transition duration-300 image-container">
+            <img src={Image1.src} alt="Image 1" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+        </div>
+        
+        <!-- Imagen 3 - Esquina derecha -->
+        <div class="relative w-60 h-80 rounded-xl overflow-hidden cursor-pointer transform transition duration-300 image-container">
+            <img src={Image3.src} alt="Image 3" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+/* rainbow-text.css */
+.rainbow-text {
+    background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    background-size: 600% 600%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbow 8s infinite linear;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

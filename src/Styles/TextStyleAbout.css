@@ -1,0 +1,11 @@
+  .text-small {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 20px; /* Relleno interno */
+    transition: transform 0.2s; /* Transición suave */
+  }
+  .text-small:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  }

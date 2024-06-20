@@ -1,0 +1,56 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Carousel from "../components/CarouselFullScreen.astro";
+import "../Styles/Rainbow.css";
+import "../Styles/Buttons.css";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="relative dark:bg-indigo-950">
+    <Header />
+    <Carousel>
+      <div class="float-up relative z-40 rounded-lg bg-teal-100/70 opacity p-4 shadow-sm transition hover:shadow-lg sm:p-6 max-w-screen-md mx-auto">
+        <!-- Título -->
+        <h3 class="rainbow-text text-8xl font-bold text-center text-white mb-4">SHOW YOUR ART</h3>
+        <!-- Línea divisoria -->
+        <div class="border-b border-slate-900 mb-4"></div>
+        <!-- Contenido -->
+        <p class="font-bold text-center text-xl text-slate-900 mb-4">
+          At Art-A-Folio, we create a unique and accessible space for artists from all around the world. Our platform allows you to upload and share your artwork, connect with other artists and art enthusiasts, and build your own community of followers. Want to see more about our artists? Check our top artists of the month!
+        </p>
+        <div class="justify-center items-center place-content-center flex space-x-4">
+          <a href="/artists/Yex" class="no-underline">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              Yex
+            </button>
+          </a>
+          <a href="/artists/Nat" class="no-underline">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              Nat
+            </button>
+          </a>
+        </div>
+      </div>
+    </Carousel>
+    <Footer />
+  </body>
+</html>

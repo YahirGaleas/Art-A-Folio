@@ -1,0 +1,23 @@
+---
+import "../Styles/Jump.css";
+import Image1 from "../../public/Images/proxima.png"; 
+import Image2 from "../../public/Images/Hanni.png";
+import Image3 from "../../public/Images/NSR.jpg";
+---
+
+<div class="flex justify-center items-center space-x-8 mt-16">
+    <!-- Imagen 1 - Esquina izquierda -->
+    <div class="relative w-60 h-80 rounded-xl -rotate-6 overflow-hidden cursor-pointer transform transition duration-300 image-container">
+      <img src={Image1.src} alt="Image 1" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+    </div>
+    
+    <!-- Imagen 2 - Centro -->
+    <div class="relative w-72 h-60 rounded-xl overflow-hidden cursor-pointer transform transition duration-300 image-container">
+      <img src={Image2.src} alt="Image 2" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+    </div>
+    
+    <!-- Imagen 3 - Esquina derecha -->
+    <div class="relative w-60 h-80 rounded-xl rotate-6 overflow-hidden cursor-pointer transform transition duration-300 image-container">
+      <img src={Image3.src} alt="Image 3" class="w-full h-full object-cover rounded-xl shadow-lg hover:shadow-xl">
+    </div>
+  </div>
